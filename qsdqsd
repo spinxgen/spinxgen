@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<!-- 
+    inspired from https://passwordsgenerator.net/
+-->
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    </head>
+    <body>
+        <div class="card" id="card1">
+            <div class= "card-header bg-primary text-white text-center">Strong Password Generator</div>
+            <div class= "card-body">
+                <form class="form" action="#">
+                    <div class = "text-center">
+                        <select id="passwordlen" class="custom-select form-control">
+                            <option value = "0">Password Length</option>
+                        </select><br><br>
+                    </div>
+                    
+                    <div class="form-check mb-2 mr-sm-2">
+                        <label class="form-check-label">Include Symbols: <b id = "example">( e.g. @#$% )</b>
+                            <input type = "checkbox" id = "symbols"/> 
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                    
+                    <div class="form-check mb-2 mr-sm-2">
+                        <label class="form-check-label">Include Numbers: <b id = "example">( e.g. 123456 )</b>
+                            <input type = "checkbox" id = "numbers"/> 
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                    
+                    <div class="form-check mb-2 mr-sm-2">
+                        <label class="form-check-label">Include Lowercase Characters: <b id = "example">( e.g. abcdefgh )</b>
+                            <input type = "checkbox" id = "lowercase"/> 
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                    
+                    <div class="form-check mb-2 mr-sm-2">
+                        <label class="form-check-label">Include Uppercase Characters: <b id = "example">( e.g. ABCDEFGH )</b>
+                            <input type = "checkbox" id = "uppercase"/>
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                    
+                    <div class="form-check mb-2 mr-sm-2">
+                        <label class="form-check-label">Exclude Ambiguous Characters: <b id = "example">( { } [ ] ( ) / \ ' " ` ~ , ; : . < > )</b>
+                            <input type = "checkbox" id = "exclude"/>
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                    
+                    <div class="form-check mb-2 mr-sm-2">
+                        <label class="form-check-label">Auto-Select: <b id = "example">( Select the password automatically )</b>
+                            <input type = "checkbox" id = "autoSelect"/>
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                    
+                    <div class = "text-center">
+                        <button type = "button" id = "generate" class="btn btn-primary mb-2 text-white text-">Generate Password</button>
+                    </div>
+                    
+                    <div class="form-actions text-center alert alert-primary">
+                        <label>Your New Password: <b id = "length"></b></label>
+                        <input type = "text" class="form-control" id = "newpass" value = "" placeholder = "e.g. - 764738bchfdf9n9c'l';l;fk;l"/><br>
+                    </div>
+                    <div class = "text-center"><span id = "copy"></span></div>
+                </form>
+                
+                <center>
+                 <div id="popup_box">
+                     <div class="modal-content">
+                          <input type="button" id="cancel_button" value="X">
+                          <p id="info_text"></p>
+                          <input type="button" id="close_button" value="Ok">
+                    </div>
+                 </div>
+                </center>
+            </div>
+            <div class="card-footer bg-success text-center">
+                <b class="name" id="name1"></b>
+            </div>
+        </div>
+    </body>
+</html>
